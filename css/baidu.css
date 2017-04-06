@@ -1,0 +1,178 @@
+body{
+	font: 14px arial;
+}
+
+/*在使用浮动之前需要清除浮动*/
+header{
+	overflow: hidden;
+}
+
+header nav{
+	width: 500px;
+	float: right;
+}
+
+header nav a{
+	margin-left: 15;
+
+}
+
+.moreProdect{
+	width: 86px;
+	height: 21px;
+	line-height: 21px;
+	background: #398bfb;
+	font-size: 13px;
+	text-align: center;
+	overflow: hidden;
+	border-bottom: 1px solid #398bfb;
+	text-decoration: none;
+	zoom:1;
+	color: #FFFFFF;
+	padding: 10px;
+
+}
+
+
+/*主体部分*/
+
+/*text-align 只对行内元素有效果*/
+.contentView{
+   text-align: center;
+   position: relative;
+}
+
+.contentView img{
+	width: 270px;
+	height: 128px;
+}
+
+
+.contentView input{
+	width: 450px;
+	height: 34px;
+	float: left;
+	border: 0px;
+}
+
+.contentView button{
+	width: 100px;
+	height: 34px;
+	background-color: #3385ff;
+	color: white;
+	font-size:15px;
+	letter-spacing:1px;
+    border:1px solid #2d78f4;
+    position: absolute;
+    right: 0px;
+}
+
+/*点击更多产品是展示出来的下拉列表
+
+这里在初始化的时候我设置的是  opacity:0;让界面隐藏
+
+*/
+.s_bdbriwrapper{
+	
+	position: absolute;
+	right: 25px;
+	opacity: 0;
+	display: block;
+	background-color: #F8F8F8;
+}
+
+/*更多按钮 当鼠标放到什么的设计*/
+.moreProdect:hover{
+	background-color:#F8F8F8; 
+	color: #000;
+}
+
+/*鼠标点到更多按钮是，设置下拉列表显示
+
+这里让opacity:1; 让界面显示出来。
+
+*/
+.moreProdect:hover .s_bdbriwrapper{
+	opacity: 1;
+	/*display: block;*/
+}
+
+/*span包含input，麦克风和摄像机，button*/
+.s_ipt_wr{
+
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 539px;
+	height: 34px;
+	margin-right: 0;
+	border: 1px solid #b6b6b6;
+}
+
+/*麦克风的按钮*/
+.ipt_rec{
+
+	position: absolute;
+	right: 138px;
+	height: 34px;
+	width: 24px;
+	background-position: 0 50%;
+	background-size: 13px 18px;
+	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAASCAYAAACAa1QyAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAAXlJREFUKBW9kr1Kw1AUx5OYVWiRGqqLiPgIios4qg+QobhI7QdYH6CKk4IPUCRNQhFRHPIAnRykIIqre7cMsUMHp0Jt/J2ShiYWxx44/M/53/N17z2qkhLbtgtQl+g62kWvKpXKExiLFlsYzWbzCLgOw7A2HA6XVFU9Ez/i41A9tjAIutA0rVAqld4j/tl13cJoNLrHf5zEJjpBbvq+/zE5FIz8jWkuYXOfMEFETppPd5qV84ebX5Iu82azWd00zR+Zg+fmEdWZd/M8b6Hf7w9kvKDX661Eg3cdx9mK7DFQdBtDPlkhYRUI5J86uq4fgA4d6nR6sCzrOAiCN8MwduDvhAdF9tFX/lJrYNRbrdZiuVz2SDqHs/P5/EBQfOHlXOIkXsVQGMnicI2OZrFY/BZuWiSBtfLo6FPgZLxGmUymxrwNDj65ww3YzuVycleDQof4Ml6bONlFZdxpUpXF3MU+peIeuIx+McELeFutVjvg/5Jeneno+W3ELz3Rmg23qA6NAAAAAElFTkSuQmCC) no-repeat center;
+}
+
+.ipt_rec:after{
+	content: "";
+	display: inline-block;
+	height: 14px;
+	width: 0;
+	border-left: 1px solid #e7e7e7;
+	margin: 10px 0 10px 24px;
+}
+
+/*摄像机按钮*/
+.soutu-btn{
+	z-index: 1;
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	height: 16px;
+	width: 18px;
+	right: 110px;
+	background: url(https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/soutu/img/camera_new_5606e8f.png) no-repeat;
+}
+
+.s_bdbriwrapper a{
+	display: block;
+	text-align: center;
+	width: 76px;
+	height: 76px;
+	margin:0 auto;
+	font-size: 12px;
+	border-bottom: #f0f0f0 1px solid;
+	color: #666;
+	text-decoration: none;
+	overflow: hidden;
+	text-shadow: none;
+	line-height: 14px;
+}
+
+
+
+.s_bdbriwrapper a img{
+	display: block;
+	height: 36px;
+	width: auto;
+	margin: 10px auto 5px;
+	cursor: pointer;
+}
+.s_bdbrievenmore a{
+	line-height: 66px;
+}
+
+footer{
+	padding-top: 50px;
+}
+footer p{
+	text-align: center;
+}
